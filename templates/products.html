@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* -------------------------------- Product -------------------------------- */
+        * {
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            z-index: 99;
+            width: 100%;
+            background: #021b35;
+            padding: 20px 0px 10px 0px;
+            top: 0;
+        }
+
+        nav .wrapper {
+            position: relative;
+            padding: 0px 30px;
+            height: 70px;
+            line-height: 70px;
+            width: 90%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .wrapper .logo a {
+            text-decoration: none;
+        }
+
+        .wrapper .logo a img {
+            width: 200px;
+
+        }
+
+        .wrapper .nav-links {
+            display: inline-flex;
+        }
+
+        .nav-links li {
+            list-style: none;
+        }
+
+        .nav-links li a {
+            color: #f2f2f2;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 9px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            background: #3A3B3C;
+        }
+
+        .nav-links .mobile-item {
+            display: none;
+        }
+
+        .nav-links .drop-menu {
+            position: absolute;
+            background: #021b35;
+            width: 180px;
+            line-height: 45px;
+            top: 85px;
+            opacity: 0;
+            visibility: hidden;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-links li:hover .drop-menu,
+        .nav-links li:hover .mega-box {
+            transition: all 0.3s ease;
+            top: 70px;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .drop-menu li a {
+            width: 100%;
+            display: block;
+            padding: 0 0 0 15px;
+            font-weight: 400;
+            border-radius: 0px;
+        }
+
+        .mega-box {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            padding: 0 30px;
+            top: 85px;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .mega-box .content {
+            background: #021b35;
+            padding: 25px 20px;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .mega-box .content .row {
+            width: calc(25% - 30px);
+            line-height: 45px;
+        }
+
+        .content .row img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content .row header {
+            color: #f2f2f2;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .content .row .mega-links {
+            margin-left: -40px;
+            border-left: 1px solid rgba(255, 255, 255, 0.09);
+        }
+
+        .row .mega-links li {
+            padding: 0 20px;
+        }
+
+        .row .mega-links li a {
+            padding: 0px;
+            padding: 0 20px;
+            color: #d9d9d9;
+            font-size: 17px;
+            display: block;
+        }
+
+        .row .mega-links li a:hover {
+            color: #f2f2f2;
+        }
+
+        .wrapper .btn {
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .wrapper .btn.close-btn {
+            position: absolute;
+            right: 30px;
+            top: 10px;
+        }
+
+        @media screen and (max-width: 970px) {
+            .wrapper {
+                width: 100%;
+            }
+
+            .wrapper .btn {
+                display: block;
+            }
+
+            .wrapper .nav-links {
+                position: fixed;
+                height: 100vh;
+                width: 100%;
+                max-width: 350px;
+                top: 0;
+                left: -100%;
+                background: #242526;
+                display: block;
+                padding: 50px 10px;
+                line-height: 50px;
+                overflow-y: auto;
+                box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+                transition: all 0.3s ease;
+            }
+
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: #242526;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #3A3B3C;
+            }
+
+            #menu-btn:checked~.nav-links {
+                left: 0%;
+            }
+
+            #menu-btn:checked~.btn.menu-btn {
+                display: none;
+            }
+
+            #close-btn:checked~.btn.menu-btn {
+                display: block;
+            }
+
+            .nav-links li {
+                margin: 15px 10px;
+            }
+
+            .nav-links li a {
+                padding: 0 20px;
+                display: block;
+                font-size: 20px;
+            }
+
+            .nav-links .drop-menu {
+                position: static;
+                opacity: 1;
+                top: 65px;
+                visibility: visible;
+                padding-left: 20px;
+                width: 100%;
+                max-height: 0px;
+                overflow: hidden;
+                box-shadow: none;
+                transition: all 0.3s ease;
+            }
+
+            #showDrop:checked~.drop-menu,
+            #showMega:checked~.mega-box {
+                max-height: 100%;
+            }
+
+            .nav-links .desktop-item {
+                display: none;
+            }
+
+            .nav-links .mobile-item {
+                display: block;
+                color: #f2f2f2;
+                font-size: 20px;
+                font-weight: 500;
+                padding-left: 20px;
+                cursor: pointer;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+            }
+
+            .nav-links .mobile-item:hover {
+                background: #3A3B3C;
+            }
+
+            .drop-menu li {
+                margin: 0;
+            }
+
+            .drop-menu li a {
+                border-radius: 5px;
+                font-size: 18px;
+            }
+
+            .mega-box {
+                position: static;
+                top: 65px;
+                opacity: 1;
+                visibility: visible;
+                padding: 0 20px;
+                max-height: 0px;
+                overflow: hidden;
+                transition: all 0.3s ease;
+            }
+
+            .mega-box .content {
+                box-shadow: none;
+                flex-direction: column;
+                padding: 20px 20px 0 20px;
+            }
+
+            .mega-box .content .row {
+                width: 100%;
+                margin-bottom: 15px;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .mega-box .content .row:nth-child(1),
+            .mega-box .content .row:nth-child(2) {
+                border-top: 0px;
+            }
+
+            .content .row .mega-links {
+                border-left: 0px;
+                padding-left: 15px;
+            }
+
+            .row .mega-links li {
+                margin: 0;
+            }
+
+            .content .row header {
+                font-size: 19px;
+            }
+        }
+
+        nav input {
+            display: none;
+        }
+
+        .body-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            padding: 0 30px;
+        }
+
+        .body-text div {
+            font-size: 45px;
+            font-weight: 600;
+        }
+
+
+        .product-container {
+            width: 100%;
+
+            padding-bottom: 20px;
+            background-color: #f7f8fa;
+        }
+
+        .productpage-row {
+
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            padding: 0px 0px 0px 0px;
+        }
+
+        .productpage-image {
+            background-color: #FFFF;
+            overflow: hidden;
+            position: relative;
+            object-fit: cover;
+        }
+
+        .productpage-image img {
+            max-width: 100%;
+        }
+
+        .productpage-image:hover img {
+            transform: scale(1.1);
+        }
+
+        .color-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: multiply;
+            transition: background-color 0.3s;
+        }
+
+        .brand {
+            font-size: 45px;
+            margin-left: 5%;
+            padding: 20px;
+            color: #021B35;
+            position: relative;
+        }
+
+        .brand::after {
+            content: "";
+            position: absolute;
+            bottom: -10%;
+            left: 22px;
+            background-color: rgb(240, 198, 11);
+            width: 49px;
+            top: 83px;
+            height: 4px;
+        }
+
+        .brand-para {
+            font-size: 20px;
+            margin-left: 5%;
+            color: rgba(75, 74, 76, 0.933);
+        }
+
+        .productpage-col {
+            background-color: white;
+            width: 20%;
+        }
+
+        .product_page {
+            background-color: rgb(249, 249, 249);
+        }
+
+        .productpage-para {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            position: relative;
+            margin: 20px auto;
+            width: 200px;
+            height: 30px;
+            background: none;
+            border-radius: 10px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 18px;
+            letter-spacing: 2px;
+            transition: 1s box-shadow;
+        }
+
+        .productpage-para h4 {
+            color: #021B35;
+            font-weight: 600;
+        }
+
+        .productpage-para:hover {
+            box-shadow: 0 5px 35px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .productpage-para:hover::before,
+        .productpage-para:hover::after {
+            display: block;
+            content: "";
+            position: absolute;
+            width: 200px;
+            height: 30px;
+            background: #fdca02;
+            border-radius: 10px;
+            z-index: -1;
+            animation: 1s clockwise infinite;
+        }
+
+        .productpage-para:hover:after {
+            background: #f3ce5e;
+            animation: 2s counterclockwise infinite;
+        }
+
+        @keyframes clockwise {
+            0% {
+                top: -5px;
+                left: 0;
+            }
+
+            12% {
+                top: -2px;
+                left: 2px;
+            }
+
+            25% {
+                top: 0;
+                left: 5px;
+            }
+
+            37% {
+                top: 2px;
+                left: 2px;
+            }
+
+            50% {
+                top: 5px;
+                left: 0;
+            }
+
+            62% {
+                top: 2px;
+                left: -2px;
+            }
+
+            75% {
+                top: 0;
+                left: -5px;
+            }
+
+            87% {
+                top: -2px;
+                left: -2px;
+            }
+
+            100% {
+                top: -5px;
+                left: 0;
+            }
+        }
+
+        @keyframes counterclockwise {
+            0% {
+                top: -5px;
+                right: 0;
+            }
+
+            12% {
+                top: -2px;
+                right: 2px;
+            }
+
+            25% {
+                top: 0;
+                right: 5px;
+            }
+
+            37% {
+                top: 2px;
+                right: 2px;
+            }
+
+            50% {
+                top: 5px;
+                right: 0;
+            }
+
+            62% {
+                top: 2px;
+                right: -2px;
+            }
+
+            75% {
+                top: 0;
+                right: -5px;
+            }
+
+            87% {
+                top: -2px;
+                right: -2px;
+            }
+
+            100% {
+                top: -5px;
+                right: 0;
+            }
+        }
+
+
+        .banner {
+            width: 100%;
+            height: 450px;
+            background-image: url('../static/images/ser-ban.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+        .product-link a {
+            color: rgb(240, 198, 11);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .product-link a:hover {
+            text-decoration: none;
+            color: rgb(240, 198, 11);
+        }
+
+        .prodfoot-section {
+            background-color: #c9cccf;
+        }
+
+        .prodfoot-container h1 {
+            color: #021B35;
+            text-align: center;
+            font-size: 24px;
+            margin-top: 2%;
+            width: 100%;
+            padding: 50px;
+        }
+
+        .prodfoot-row {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .product_logo {
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .product_logo img {
+            max-width: 100%;
+            max-height: 100px;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+            background-image: none;
+            background-size: 0;
+            background-repeat: no-repeat;
+            mix-blend-mode: multiply;
+        }
+
+        .product_logo img:hover {
+            transform: scale(1.1);
+        }
+
+        .navbar {
+            position: relative;
+            z-index: 1000;
+        }
+
+        .home {
+            position: relative;
+            z-index: 1;
+        }
+
+        .navigation {
+            margin-bottom: 50px;
+        }
+
+        .nav-container {
+            width: 85%;
+            margin: auto;
+        }
+
+        .navbar {
+            padding: 10px;
+            list-style: none;
+            display: flex;
+            /* justify-content: space-between;
+               align-items: center; */
+            /* background-color: aquamarine; */
+        }
+
+        .nav-link {
+            cursor: pointer;
+            margin-top: 30px;
+            display: flex;
+        }
+
+        .nav-link ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-link ul li {
+            padding: 10px;
+            gap: 5px;
+        }
+
+        .image-logo img {
+            width: 50%;
+            padding: 20px;
+        }
+
+        .dropdown-row {
+            display: none;
+            position: absolute;
+            margin-top: 80px;
+            margin-left: 20%;
+            width: 60%;
+            height: 35%;
+            background-color: white;
+        }
+
+        .dropdown-row ul li {
+            list-style: none;
+        }
+
+        .nav-link:hover+.dropdown-row,
+        .dropdown-row:hover {
+            display: block;
+            flex-wrap: wrap;
+        }
+
+        .drop-col {
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .drop-col1 {
+            display: flex;
+            gap: 15px;
+        }
+
+        .drop-col li {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .nav-link li .dropdown-trigger {
+            visibility: visible;
+            height: auto;
+            overflow: visible;
+        }
+
+        .dropdown-row2 {
+            display: none;
+            position: absolute;
+            margin-top: 80px;
+            margin-left: 20%;
+            width: 60%;
+            height: 35%;
+            background-color: white;
+        }
+
+        .nav-link:hover+.dropdown-row2,
+        .dropdown-row2:hover {
+            display: block;
+            flex-wrap: wrap;
+        }
+
+        .drop-col2 {
+            display: flex;
+            gap: 40px;
+        }
+
+        .drop-rcol {
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+            background-color: white;
+            padding: 30px;
+        }
+
+        .drop-col2 li {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .nav-link li .dropdown-trigger {
+            visibility: visible;
+            height: auto;
+            overflow: visible;
+        }
+
+        .dropdown-row3 {
+            display: none;
+            position: absolute;
+            margin-top: 80px;
+            margin-left: 20%;
+            width: 60%;
+            height: 35%;
+            background-color: white;
+        }
+
+        .nav-link:hover+.dropdown-row3,
+        .dropdown-row3:hover {
+            display: block;
+            flex-wrap: wrap;
+        }
+
+        .drop-col3 {
+            display: flex;
+            gap: 40px;
+        }
+
+        .drop-rocol {
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+            background-color: white;
+            padding: 30px;
+        }
+
+        .drop-col3 li {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .nav-link li .dropdown-trigger3 {
+            visibility: visible;
+            height: auto;
+            overflow: visible;
+        }
+
+        .dropdown-row4 {
+            display: none;
+            position: absolute;
+            margin-top: 80px;
+            margin-left: 20%;
+            width: 60%;
+            height: 35%;
+            background-color: white;
+        }
+
+        .nav-link:hover+.dropdown-row4,
+        .dropdown-row4:hover {
+            display: block;
+            flex-wrap: wrap;
+        }
+
+        .drop-col4 {
+            display: flex;
+            gap: 30px;
+        }
+
+        .drop-rowcol {
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+            background-color: white;
+            padding: 30px;
+        }
+
+        .drop-col4 li {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .nav-link li .dropdown-trigger4 {
+            visibility: visible;
+            height: auto;
+            overflow: visible;
+        }
+
+        .dropdown-row5 {
+            display: none;
+            position: absolute;
+            margin-top: 80px;
+            margin-left: 20%;
+            width: 60%;
+            height: 35%;
+            background-color: white;
+        }
+
+        .nav-link:hover+.dropdown-row5,
+        .dropdown-row5:hover {
+            display: block;
+            flex-wrap: wrap;
+        }
+
+        .drop-col5 {
+            display: flex;
+            gap: 40px;
+        }
+
+        .drop-row1col {
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+            background-color: white;
+            padding: 30px;
+        }
+
+        .drop-col5 li {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .nav-link li .dropdown-trigger5 {
+            visibility: visible;
+            height: auto;
+            overflow: visible;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .inputbox {
+            position: relative;
+            margin-right: 10px;
+            gap: 60px;
+        }
+
+        .inputbox input[type="text"] {
+            padding-right: 30px;
+            width: 200px;
+        }
+
+        .search-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .addto-cat {
+            cursor: pointer;
+        }
+
+        .arrow {
+            position: absolute;
+            nav-up: 5px;
+            bottom: 7;
+            left: 100%;
+            transform: translate(-50%, -50%);
+            transform: rotate(150deg);
+            cursor: pointer;
+        }
+
+        .arrow span {
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-bottom: 5px solid rgb(8, 8, 8);
+            border-right: 5px solid;
+            transform: rotate(160deg);
+        }
+
+        .arrow span:nth-child(2) {
+            animation-delay: -0.2s;
+        }
+
+        .arrow span:nth-child(3) {
+            animation-delay: -0.4s;
+        }
+
+        @keyframes animate {
+            0% {
+                opacity: 0;
+                transform: rotate(45deg) translate(-20px, -20px);
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: rotate(45deg) translate(20px, 20px);
+            }
+        }
+
+        @media (max-width: 320px) {
+            .productpage-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .productpage-col {
+                width: 100% !important;
+                margin-bottom: 20px;
+            }
+
+            .productpage-box {
+                width: 100% !important;
+            }
+
+            .productpage-image img {
+                width: 100%;
+            }
+
+            .prodfoot-row {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+            }
+
+            .product_logo img {
+                max-width: 20%;
+                max-height: 100px;
+            }
+
+            /* .prodfoot-row {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .product_logo img {
+        max-width: 10%;
+        max-height: 80px;
+    } */
+        }
+
+        @media (max-width: 760px) {
+            .productpage-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .productpage-col {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .productpage-box {
+                width: 90%;
+            }
+
+            .productpage-image img {
+                width: 100%;
+                height: auto;
+            }
+
+            .prodfoot-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .product_logo img {
+                max-width: 90%;
+                max-height: 90px;
+            }
+        }
+
+        @media (max-width: 1020px) {
+            .productpage-row {
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            .productpage-col {
+                width: 45%;
+                margin-bottom: 20px;
+            }
+
+            .productpage-box {
+                width: 100%;
+            }
+
+            .productpage-image img {
+                width: 100%;
+                height: auto;
+            }
+
+            .prodfoot-row {
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            .product_logo img {
+                max-width: 100%;
+                max-height: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="/indexSection"><img src="../static/images/logo1-removebg-preview.png"></a></div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><a href="/index">Home</a></li>
+                <li>
+                    <a href="/about" class="desktop-item">Company</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Company</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="../static/images/compasny-he (1).jpeg"  alt="">
+                            </div>
+                            <div class="row">
+                                <header>Who we are</header>
+                                <ul class="mega-links">
+                                    <li><a href="/abtStrategy">Strategy & Purpose</a></li>
+                                    <li><a href="#">Officers</a></li>
+                                    <li><a href="/abtHistory">History</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header></header>
+                                <ul class="mega-links">
+                                    <li><a href="/abtProducts">Brands</a></li>
+                                    <li><a href="#">Code of Conduct</a></li>
+                                    <li><a href="/abtLocation">Global Locations</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>Building Better</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Sustainability</a></li>
+                                    <li><a href="#">Innovation</a></li>
+                                    <li><a href="#">Foundation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="/pro" class="desktop-item">Products</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Products</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="../static/images/product-head.jpeg" alt="">
+                            </div>
+                            <div class="row">
+                                <!-- <header>Design Services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product1">Hydraulic Pumps</a></li>
+                                    <li><a href="/product2">Valves</a></li>
+                                    <li><a href="/product3">Power Packs</a></li>
+                                    <li><a href="/product4">Fittings</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <!-- <header>Email Services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product5">Intersial valves</a></li>
+                                    <li><a href="/product6">Control Works</a></li>
+                                    <li><a href="/product7">Activation</a></li>
+                                    <li><a href="/product8">Directional control</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <!-- <header>Security services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product9">Throttle valve</a></li>
+                                    <li><a href="/product10">PVR1T Variable</a></li>
+                                    <li><a href="/product11">HPV43 Double</a></li>
+                                    <li><a href="/product12">Cartridge Valve</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="/indus" class="desktop-item">Industries</a>
+                    <input type="checkbox" id="showDrop">
+                    <label for="showDrop" class="mobile-item">Industries</label>
+                    <ul class="drop-menu">
+                        <li><a href="/indus">Power</a></li>
+                        <li><a href="/indus">Steel</a></li>
+                        <li><a href="/indus">Plastic</a></li>
+                        <li><a href="/indus">Construction</a></li>
+                        <li><a href="/indus">Mechine Tools</a></li>
+                        <li><a href="/indus">Marine</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+
+    </nav>
+
+
+    <section class="banner-container">
+        <div class="banner">
+
+        </div>
+    </section>
+    <section class="product_page">
+        <div class="productpage-container">
+            <h2 class="brand">Hydro TORK Brands</h2>
+
+            <p class="brand-para">
+                Caterpillar Inc. has a portfolio of brands offering machines, engines, components, services and
+                solutions to
+                meet the unique needs of a variety of industries and customers around the world. <br><br>
+                The Caterpillar brand represents the whole corporation and our people. Cat® is the flagship brand of
+                products and services with customers served by our independently owned and operated global Cat dealer
+                network. <br><br>
+                Some of our other brands include Progress Rail, Solar Turbines, Perkins and SEM.
+            </p><br>
+            <div class="productpage-row">
+                <div class="productpage-col">
+                    <div class="productpage-box">
+                    <a href="/product1">
+                        <div class="productpage-image" onclick="navigateToProcut1()">
+                            <img src="../static/images/hydraulic.jpg" alt="img" srcset="" width="300px" height="210px">
+
+                            <!-- <div class="color-overlay"></div> -->
+                        </div>
+
+                        <div class="productpage-para">
+                            <h4>Hydraulic Pumps</h4>
+                            <div class="arrow">
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="productpage-col">
+                    <div class="productpage-box">
+                    <a href="/product2">
+                        <div class="productpage-image" onclick="navigateToProcut2()">
+                            <img src="../static/images/valves.jpg" alt="img" srcset="" width="300px" height="210px">
+
+                            <!-- <div class="color-overlay"></div> -->
+                        </div>
+
+                        <div class="productpage-para">
+                            <h4>Valves</h4>
+                            <div class="arrow">
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+[]
+                <div class="productpage-col">
+                    <div class="productpage-box">
+                    <a href="/product3">
+                        <div class="productpage-image" onclick="navigateToProcut3()">
+                            <img src="../static/images/power-pack7.jfif" alt="img" srcset="" width="300px" height="210px">
+
+                            <!-- <div class="color-overlay"></div> -->
+                        </div>
+
+                        <div class="productpage-para">
+                            <h4>Power Pack</h4>
+                            <div class="arrow">
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+                <div class="productpage-col">
+                    <div class="productpage-box">
+                    <a href="/product4">
+                        <div class="productpage-image" onclick="navigateToProcut4()">
+                            <img src="../static/images/fitting.jpg" alt="img" srcset="" width="300px" height="210px">
+
+                            <!-- <div class="color-overlay"></div> -->
+                        </div>
+
+                        <div class="productpage-para">
+                            <h4>Fitting</h4>
+                            <div class="arrow">
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="productpage-col">
+                    <div class="productpage-box">
+                    <a href="/product5">
+                        <div class="productpage-image" onclick="navigateToProcut5()">
+                            <img src="../static/images/intr1.jpg" alt="img" srcset="" width="300px" height="210px">
+
+                            <!-- <div class="color-overlay"></div> -->
+                        </div>
+
+                        <div class="productpage-para">
+                            <h4>Intersial Valves</h4>
+                            <div class="arrow">
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="productpage-col">
+                    <div class="productpage-box">
+                    <a href="/product6">
+                        <div class="productpage-image" onclick="navigateToProcut6()">
+                            <img src="../static/images/pic1.jpg" alt="img" srcset="" width="300px" height="210px">
+
+                            <!-- <div class="color-overlay"></div> -->
+                        </div>
+
+                        <div class="productpage-para">
+                            <h4>Control Works</h4>
+                            <div class="arrow">
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="productpage-col">
+                    <div class="productpage-box">
+                    <a href="/product7">
+                        <div class="productpage-image" onclick="navigateToProcut7()">
+                            <img src="../static/images/pic2.jpg" alt="img" srcset="" width="300px" height="210px">
+
+                            <!-- <div class="color-overlay"></div> -->
+                        </div>
+
+                        <div class="productpage-para">
+                            <h4>Activation</h4>
+                            <div class="arrow">
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="productpage-col">
+                    <div class="productpage-box">
+                    <a href="/product8">
+                        <div class="productpage-image" onclick="navigateToProcut8()">
+                            <img src="../static/images/Directional.png" alt="img" srcset="" width="300px" height="210px">
+
+                            <!-- <div class="color-overlay"></div> -->
+                        </div>
+
+                        <div class="productpage-para">
+                            <h4>Directional control</h4>
+                            <div class="arrow">
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="productpage-col">
+                    <div class="productpage-box">
+                    <a href="/product9">
+                        <div class="productpage-image" onclick="navigateToProcut9()">
+                            <img src="../static/images/Throttle.png" alt="img" srcset="" width="300px" height="210px">
+
+                            <!-- <div class="color-overlay"></div> -->
+                        </div>
+
+                        <div class="productpage-para">
+                            <h4>Throttle valve</h4>
+                            <div class="arrow">
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="productpage-col">
+                    <div class="productpage-box">
+                    <a href="/product10">
+                        <div class="productpage-image" onclick="navigateToProcut10()">
+                            <img src="../static/images/PVRI T.png" alt="img" srcset="" width="300px" height="210px">
+
+                            <!-- <div class="color-overlay"></div> -->
+                        </div>
+
+                        <div class="productpage-para">
+                            <h4>PVR1T Variable</h4>
+                            <div class="arrow">
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+
+                <div class="productpage-col">
+                    <div class="productpage-box">
+                    <a href="/product11">
+                        <div class="productpage-image" onclick="navigateToProcut11()">
+                            <img src="../static/images/DOUBLE PUMP.png" alt="img" srcset="" width="300px" height="210px">
+
+                            <!-- <div class="color-overlay"></div> -->
+                        </div>
+
+                        <div class="productpage-para">
+                            <h4>HPV43 Double</h4>
+                            <div class="arrow">
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+                <div class="productpage-col">
+                    <div class="productpage-box">
+                    <a href="/product12">
+                        <div class="productpage-image" onclick="navigateToProcut12()">
+                            <img src="../static/images/CARTRIDGE.png" alt="img" srcset="" width="300px" height="210px">
+
+                            <!-- <div class="color-overlay"></div> -->
+                        </div>
+
+                        <div class="productpage-para">
+                            <h4>Cartridge Valve</h4>
+                            <div class="arrow">
+                                <span></span>
+                            </div>
+                        </div>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="prodfoot-section">
+        <div class="prodfoot-container">
+            <h1>The Products available in this company, will also be available in our company</h1>
+            <div class="prodfoot-row">
+
+                <div class="product_logo" onclick="navigateToProcut12()">
+                    <img src="../static/images/yuken logo.png" alt="img" srcset="" width="240px" height="200px">
+
+                </div>
+                <div class="product_logo" onclick="navigateToProcut12()">
+                    <img src="../static/images/rexroth logo.png" alt="img" srcset="" width="240px" height="200px">
+
+                </div>
+                <div class="product_logo" onclick="navigateToProcut12()">
+                    <img src="../static/images/eaton logo.png" alt="img" srcset="" width="240px" height="200px">
+
+                </div>
+                <div class="product_logo" onclick="navigateToProcut12()">
+                    <img src="../static/images/Parker logo.png" alt="img" srcset="" width="240px" height="200px">
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function navigateToProcut1() {
+            window.location.href = 'produ1.html';
+
+        }
+        function navigateToProcut2() {
+            window.location.href = 'produ2.html';
+        }
+        function navigateToProcut3() {
+            window.location.href = 'produ3.html';
+        }
+        function navigateToProcut4() {
+            window.location.href = 'produ4.html';
+        }
+        function navigateToProcut5() {
+            window.location.href = 'produ5.html';
+        }
+        function navigateToProcut6() {
+            window.location.href = 'produ6.html';
+        }
+        function navigateToProcut7() {
+            window.location.href = 'produ7.html';
+        }
+        function navigateToProcut8() {
+            window.location.href = 'produ8.html';
+        }
+        function navigateToProcut9() {
+            window.location.href = 'produ9.html';
+        }
+        function navigateToProcut10() {
+            window.location.href = 'produ10.html';
+        }
+        function navigateToProcut11() {
+            window.location.href = 'produ11.html';
+        }
+        function navigateToProcut12() {
+            window.location.href = 'produ12.html';
+        }
+
+        const hydraulicLink = document.getElementById('hydraulic-link');
+        hydraulicLink.addEventListener('click', function (event) {
+            event.preventDefault();
+            window.location.href = 'index.html';
+        });
+
+
+
+
+
+        const dropdownTrigger = document.querySelector('.dropdown-trigger');
+        const dropdownRow = document.querySelector('.dropdown-row');
+
+
+        dropdownTrigger.addEventListener('mouseover', function () {
+            dropdownRow.style.display = 'block';
+        });
+
+        dropdownRow.addEventListener('mouseover', function () {
+            dropdownRow.style.display = 'block';
+        });
+
+        dropdownTrigger.addEventListener('mouseout', function () {
+            dropdownRow.style.display = 'none';
+        });
+
+        dropdownRow.addEventListener('mouseout', function () {
+            dropdownRow.style.display = 'none';
+        });
+        const dropdownTrigger2 = document.querySelector('.dropdown-trigger2');
+        const dropdownRow2 = document.querySelector('.dropdown-row2');
+
+        dropdownTrigger2.addEventListener('mouseover', function () {
+            dropdownRow2.style.display = 'block';
+        });
+
+        dropdownTrigger2.addEventListener('mouseout', function () {
+            dropdownRow2.style.display = 'none';
+        });
+
+        dropdownRow2.addEventListener('mouseover', function () {
+            dropdownRow2.style.display = 'block';
+        });
+
+        dropdownRow2.addEventListener('mouseout', function () {
+            dropdownRow2.style.display = 'none';
+        });
+        const dropdownTrigger3 = document.querySelector('.dropdown-trigger3');
+        const dropdownRow3 = document.querySelector('.dropdown-row3');
+
+        dropdownTrigger3.addEventListener('mouseover', function () {
+            dropdownRow3.style.display = 'block';
+        });
+
+        dropdownTrigger3.addEventListener('mouseout', function () {
+            dropdownRow3.style.display = 'none';
+        });
+
+        dropdownRow3.addEventListener('mouseover', function () {
+            dropdownRow3.style.display = 'block';
+        });
+
+        dropdownRow3.addEventListener('mouseout', function () {
+            dropdownRow3.style.display = 'none';
+        });
+        const dropdownTrigger4 = document.querySelector('.dropdown-trigger4');
+        const dropdownRow4 = document.querySelector('.dropdown-row4');
+
+        dropdownTrigger4.addEventListener('mouseover', function () {
+            dropdownRow4.style.display = 'block';
+        });
+
+        dropdownTrigger4.addEventListener('mouseout', function () {
+            dropdownRow4.style.display = 'none';
+        });
+
+        dropdownRow4.addEventListener('mouseover', function () {
+            dropdownRow4.style.display = 'block';
+        });
+
+        dropdownRow4.addEventListener('mouseout', function () {
+            dropdownRow4.style.display = 'none';
+        });
+        const dropdownTrigger5 = document.querySelector('.dropdown-trigger5');
+        const dropdownRow5 = document.querySelector('.dropdown-row5');
+
+        dropdownTrigger5.addEventListener('mouseover', function () {
+            dropdownRow5.style.display = 'block';
+        });
+
+        dropdownTrigger5.addEventListener('mouseout', function () {
+            dropdownRow5.style.display = 'none';
+        });
+
+        dropdownRow5.addEventListener('mouseover', function () {
+            dropdownRow5.style.display = 'block';
+        });
+
+        dropdownRow5.addEventListener('mouseout', function () {
+            dropdownRow5.style.display = 'none';
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

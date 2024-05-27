@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industries</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .industries-banner-container {
+            width: 90%;
+            margin: auto;
+
+        }
+
+        .industries-banner-row {
+            display: flex;
+        }
+
+        .indu-banner-container {
+            width: 100%;
+        }
+
+        .industries-banner-col {
+            width: 100%;
+        }
+
+        .industries-h2 {
+            padding-top: 90px;
+            font-size: 35px;
+            color: #021B35;
+            position: relative;
+        }
+
+        .industries-h2::before {
+            content: "";
+            position: absolute;
+            bottom: 10%;
+
+            left: 1px;
+            background-color: rgb(240, 198, 11);
+            width: 50px;
+            top: 95%;
+            height: 5px;
+        }
+
+        .industries-p {
+            font-size: 18px;
+            padding: 13px 0px;
+        }
+
+        .industries-content-container {
+            width: 90%;
+            margin: auto;
+        }
+
+        .industries-content-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            border-bottom: 3px solid #021b35;
+        }
+
+        .content-col1 {
+            width: 30.3%;
+        }
+
+        .content-h3 {
+            text-align: center;
+            font-size: 20px;
+            padding: 17px 0px;
+        }
+
+        .steel-container {
+            width: 90%;
+            margin: auto;
+        }
+
+        .steel-row {
+            display: flex;
+            border-bottom: 3px solid #021b35;
+        }
+
+        .steel-col {
+            width: 30.3%;
+            padding-bottom: 20px;
+        }
+
+        .steel-h3 {
+            color: #021B35;
+            font-size: 30px;
+            padding: 20px 0px;
+            font-weight: 600;
+        }
+
+        @media (min-width:320px) {
+            .industries-banner-container {
+                width: 90%;
+            }
+
+            .industries-banner-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .industries-banner-col {
+                width: 100%;
+            }
+
+            .industries-content-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            .industries-content-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .content-col1 {
+                width: 100%;
+            }
+
+            .steel-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            .steel-row {
+                display: flex;
+            }
+
+            .steel-col {
+                width: 100%;
+            }
+        }
+
+        @media (min-width:760px) {
+            .industries-banner-container {
+                width: 90%;
+            }
+
+            .industries-banner-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .industries-banner-col {
+                width: 100%;
+            }
+
+            .industries-content-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            .industries-content-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .content-col1 {
+                width: 30.30%;
+            }
+
+            .steel-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            .steel-row {
+                display: flex;
+            }
+
+            .steel-col {
+                width: 30.3%;
+            }
+        }
+
+        @media (min-width:1020px) {
+            .industries-banner-container {
+                width: 90%;
+            }
+
+            .industries-banner-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .industries-banner-col {
+                width: 100%;
+            }
+
+            .industries-content-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            .industries-content-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .content-col1 {
+                width: 30.30%;
+            }
+
+            .steel-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            .steel-row {
+                display: flex;
+            }
+
+            .steel-col {
+                width: 30.3%;
+            }
+        }
+
+        /*-------------------------------------footercss----------------------------------*/
+
+        .prodfoot-section {
+            background-color: #c9cccf;
+        }
+
+        .prodfoot-container h1 {
+            color: #021B35;
+            text-align: center;
+            font-size: 24px;
+            margin-top: 2%;
+            width: 100%;
+            padding: 50px;
+        }
+
+        .prodfoot-row {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .product_logo {
+            margin: 10px;
+            cursor: pointer;
+
+        }
+
+        .product_logo img {
+            max-width: 100%;
+            max-height: 100px;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+            background-image: none;
+            background-size: 0;
+            background-repeat: no-repeat;
+            mix-blend-mode: multiply;
+
+        }
+
+        .product_logo img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="/indexSection"><img src="../static/images/logo1-removebg-preview.png"></a></div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><a href="/index">Home</a></li>
+                <li>
+                    <a href="/about" class="desktop-item">Company</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Company</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="../static/images/compasny-he (1).jpeg"  alt="">
+                            </div>
+                            <div class="row">
+                                <header>Who we are</header>
+                                <ul class="mega-links">
+                                    <li><a href="/abtStrategy">Strategy & Purpose</a></li>
+                                    <li><a href="#">Officers</a></li>
+                                    <li><a href="/abtHistory">History</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header></header>
+                                <ul class="mega-links">
+                                    <li><a href="/abtProducts">Brands</a></li>
+                                    <li><a href="#">Code of Conduct</a></li>
+                                    <li><a href="/abtLocation">Global Locations</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>Building Better</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Sustainability</a></li>
+                                    <li><a href="#">Innovation</a></li>
+                                    <li><a href="#">Foundation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="/pro" class="desktop-item">Products</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Products</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="../static/images/product-head.jpeg" alt="">
+                            </div>
+                            <div class="row">
+                                <!-- <header>Design Services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product1">Hydraulic Pumps</a></li>
+                                    <li><a href="/product2">Valves</a></li>
+                                    <li><a href="/product3">Power Packs</a></li>
+                                    <li><a href="/product4">Fittings</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <!-- <header>Email Services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product5">Intersial valves</a></li>
+                                    <li><a href="/product6">Control Works</a></li>
+                                    <li><a href="/product7">Activation</a></li>
+                                    <li><a href="/product8">Directional control</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <!-- <header>Security services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product9">Throttle valve</a></li>
+                                    <li><a href="/product10">PVR1T Variable</a></li>
+                                    <li><a href="/product11">HPV43 Double</a></li>
+                                    <li><a href="/product12">Cartridge Valve</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="/indus" class="desktop-item">Industries</a>
+                    <input type="checkbox" id="showDrop">
+                    <label for="showDrop" class="mobile-item">Industries</label>
+                    <ul class="drop-menu">
+                        <li><a href="/indus">Power</a></li>
+                        <li><a href="/indus">Steel</a></li>
+                        <li><a href="/indus">Plastic</a></li>
+                        <li><a href="/indus">Construction</a></li>
+                        <li><a href="/indus">Mechine Tools</a></li>
+                        <li><a href="/indus">Marine</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+
+    </nav>
+
+    <section class="indu-banner">
+        <div class="indu-banner-container">
+            <img src="../static/images/ind-ban.png" alt="" width="100%" style="padding-top: 100px;">
+        </div>
+    </section>
+
+    <section class="industries-banner">
+        <div class="industries-banner-container">
+            <div class="industries-banner-row">
+                <div class="industries-banner-col">
+                    <h2 class="industries-h2">Industries</h2>
+                    <p class="industries-p">Hydro TORK Limited believes in providing most suitable and cost effective
+                        solutions for all the
+                        hydraulic applications. We have most experienced application engineering team of 40 engineers
+                        working relentlessly on reducing cost and improving the performance of hydraulics in various
+                        applications.
+                    </p>
+                    <p class="industries-p">We have more than five decades of experience in handling applications like
+                        Hydro Electric Power
+                        Generation, Thermal Power, Wind, Solar, Steel Mills, Machine Tools, Plastics, Marine, and Heavy
+                        Engineering and so on.
+                    </p>
+                    <p class="industries-p">Our solutions are from concept to commissioning stage, depend on us, we will
+                        delight you with our
+                        excellent attention, service & support.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="industries-content">
+        <div class="industries-content-container">
+            <h3 class="steel-h3">Power</h3>
+            <div class="industries-content-row">
+                <div class="content-col1" data-aos="fade-down-right">
+                    <div class="content-img">
+                        <h3 class="content-h3">Hydro Electric Power </h3>
+                        <img src="../static/images/Hydro electric power.jpeg" alt="" width="100%" height="70%">
+                    </div>
+                </div>
+                <div class="content-col1" data-aos="fade-down-left">
+                    <h3 class="content-h3">Wind power</h3>
+                    <img src="../static/images/wind power.jpeg" alt="" width="100%">
+                </div>
+                <div class="content-col1"></div>
+                <div class="content-col1" data-aos="fade-down-right">
+                    <h3 class="content-h3">Thermal Power</h3>
+                    <img src="../static/images/Termal power.jpeg" alt="" width="100%" height="70%">
+                </div>
+                <div class="content-col1" data-aos="fade-down-left">
+                    <h3 class="content-h3">Solar Power</h3>
+                    <img src="../static/images/solar power.jpeg" alt="" width="100%" height="70%">
+                </div>
+                <div class="content-col1"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="steel">
+        <div class="steel-container">
+            <h3 class="steel-h3">Steel</h3>
+            <div class="steel-row">
+                <div class="steel-col">
+                    <img src="../static/images/steel.jpeg" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="steel">
+        <div class="steel-container">
+            <h3 class="steel-h3">Plastics</h3>
+            <div class="steel-row">
+                <div class="steel-col">
+                    <img src="../static/images/plastics.jpeg" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="steel">
+        <div class="steel-container">
+            <h3 class="steel-h3">Construction</h3>
+            <div class="steel-row">
+                <div class="steel-col">
+                    <img src="../static/images/construction.jpeg" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="steel">
+        <div class="steel-container">
+            <h3 class="steel-h3">Machine Tools</h3>
+            <div class="steel-row">
+                <div class="steel-col">
+                    <img src="../static/images/Machine tools.jpeg" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="steel">
+        <div class="steel-container">
+            <h3 class="steel-h3">Marine</h3>
+            <div class="steel-row">
+                <div class="steel-col">
+                    <img src="../static/images/marine.jpeg" alt="" width="100%">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="prodfoot-section">
+        <div class="prodfoot-container">
+            <h1>The Products available in this company, will also be available in our company</h1>
+            <div class="prodfoot-row">
+
+                <div class="product_logo" onclick="navigateToProcut12()">
+                    <img src="../static/images/yuken logo.png" alt="img" srcset="" width="240px" height="200px">
+
+                </div>
+                <div class="product_logo" onclick="navigateToProcut12()">
+                    <img src="../static/images/rexroth logo.png" alt="img" srcset="" width="240px" height="200px">
+
+                </div>
+                <div class="product_logo" onclick="navigateToProcut12()">
+                    <img src="../static/images/eaton logo.png" alt="img" srcset="" width="240px" height="200px">
+
+                </div>
+                <div class="product_logo" onclick="navigateToProcut12()">
+                    <img src="../static/images/Parker logo.png" alt="img" srcset="" width="240px" height="200px">
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</body>
+
+</html>

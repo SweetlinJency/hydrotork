@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industries</title>
+    <link rel="stylesheet" href="./style1.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .sustainability-banner-container {
+            width: 100%;
+            margin: auto;
+        }
+
+        .sustainability-banner-row img {
+            width: 100%;
+        }
+
+        .sustainability {
+            padding: 50px 0;
+        }
+
+        .sustainability-container {
+            width: 85%;
+            margin: auto;
+        }
+
+        .sustainability-row {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .sustainability-col {
+            width: 23%;
+            margin-top: 50px;
+            border: 1px solid rgb(204, 204, 203);
+            cursor: pointer;
+        }
+
+        .sustainability-col img {
+            border-bottom: 3px solid yellow;
+        }
+
+        .sustainability-col:hover {
+            box-shadow: 0px 0px 12px 2px rgb(194, 194, 191);
+        }
+
+        .sustainability-title {
+            font-size: 40px;
+            position: relative;
+        }
+
+        .sustainability-title::before {
+            content: "";
+            width: 50px;
+            height: 5px;
+            background-color: yellow;
+            top: 50px;
+            left: 0px;
+            position: absolute;
+        }
+
+        .sustainability-content {
+            font-size: 20px;
+            padding-top: 40px;
+        }
+
+        .sustainability-para-h3 {
+            /* font-size: 24px; */
+            padding-bottom: 10px;
+            cursor: pointer;
+            transition: text-decoration 0.3s;
+        }
+
+        .sustainability-para {
+            padding: 25px;
+        }
+        .action-container{
+            width:90% ;
+            margin: 60px;
+        }
+        .action-row{
+            display:flex;
+        }
+        .action-col{
+            width: 33%;
+        }
+        
+        .action-box{
+
+            margin: 20px 10px ;
+            border-radius: 2px;
+            border:1px solid silver;
+            justify-content: center;
+            height: 400px;
+            
+    }
+    .heading{
+        margin-left: 20px;
+    }
+    .para{
+        margin-left: 20px;
+    }
+    .head{
+        margin-left: 20px;
+    }
+
+
+   
+
+    </style>
+</head>
+
+<body>
+
+    <!-- -------------------------------menu section------------------------------------- -->
+    <section class="navigation">
+        <div class="nav-container">
+        <nav class="navbar">
+            
+            <div class="image-logo">
+                <img src="images/wesite-logo.jpg">
+            </div>
+            <div class="nav-link">
+                <ul>
+                    <li class="dropdown-trigger">COMPANY</li>
+                    <li class="dropdown-trigger2">BRANDS</li>
+                    <li class="dropdown-trigger3">INVESTORS</li>
+                    <li class="dropdown-trigger4">NEWS</li>
+                    <li class="dropdown-trigger5">CAREERS</li>
+                </ul>
+            </div>
+
+            <div class="dropdown-row" id="dropdown-row1">
+                <div class="drop-col">
+                    <h2>Company</h2><br>
+                    <hr>
+                    <div class="drop-col1">
+                        <ul>
+                            <li>Strategy & Purpose</li>
+                            <li>Governance</li>
+                            <li>History</li>
+                        </ul>
+                        <ul>
+                            <li>Caterpillar Foundation</li>
+                            <li>Code of Conduct </li>
+                            <li>Sustainability</li>
+                        </ul>
+                        <ul>
+                            <li>Diversity & Inclusion</li>
+                            <li>Innovation</li>
+                            <li>Political Engagement</li>
+                        </ul>
+                        <ul>
+                            <li>Global Locations</li>
+                            <li>Visitors Center & Museum</li>
+                            <li>Working Together</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown-row2" id="dropdown-row2">
+                <div class="drop-rcol">
+                    <h2>Brands</h2><br>
+                    <hr>
+                    <div class="drop-col2">
+                        <ul>
+                            <li>Cat</li>
+                            <li>Cat Financial</li>
+                            <li>Cat Reman</li>
+                            <li>Cat Rental Store</li>
+                            <li>Cat Lift Trucks</li>
+                        </ul>
+                        <ul>
+                            <li>Anchor</li>
+                            <li>AsiaTrak </li>
+                            <li>FG Wilson</li>
+                            <li>Hindustan</li>
+                            <li>MaK</li>
+                        </ul>
+                        <ul>
+                            <li>MWM</li>
+                            <li>Perkins</li>
+                            <li>Progress Rail</li>
+                            <li>SEM</li>
+                            <li>Solar Turbines</li>
+                        </ul>
+                        <ul>
+                            <li>SPM Oil & Gas</li>
+                            <li>Turner Powertrain Systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-row3" id="dropdown-row3">
+                <div class="drop-rocol">
+                    <h2>Investors</h2><br>
+                    <hr>
+                    <div class="drop-col3">
+                        <ul>
+                            <li>Stock Information</li>
+                            <li>Financial Information</li>
+                        </ul>
+                        <ul>
+                            <li>Shareholder Services</li>
+                            <li>Events & Presentations</li>
+                        </ul>
+                        <ul>
+                            <li>Quarterly Financial Results</li>
+                            <li>Caterpillar Reports</li>
+                        </ul>
+                        <ul>
+                            <li>SEC Filings</li>
+                            <li>Governance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-row4" id="dropdown-row4">
+                <div class="drop-rowcol">
+                    <h2>News</h2><br>
+                    <hr>
+                    <div class="drop-col4">
+                        <ul>
+                            <li>Feature Stories</li>
+                            <li>Corporate Press Releases</li>
+                        </ul>
+                        <ul>
+                            <li>Media Information</li>
+                            <li>Social Media</li>
+                        </ul>
+                        <ul>
+                            <li>Frequently Asked Questions (FAQs)</li>
+
+                        </ul>
+                        <ul>
+                            <li>Caterpillar Publications</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-row5" id="dropdown-row5">
+                <div class="drop-row1col">
+                    <h2>Career</h2><br>
+                    <hr>
+                    <div class="drop-col5">
+                        <ul>
+                            <li>Working at Caterpillar</li>
+                        </ul>
+                        <ul>
+                            <li>Career Areas</li>
+                        </ul>
+                        <ul>
+                            <li>Diversity & Inclusion</li>
+
+                        </ul>
+                        <ul>
+                            <li>Meet Team Caterpillar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="search">
+                <div class="inputbox">
+                    <input type="text" placeholder="search">
+                    <div class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+
+                <div class="addto-cat">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+            </div> -->
+            <div class="search">
+                  <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+                  <button id="searchBtn" class="search-btn">
+                    <i class="fas fa-search"></i>
+                  </button>
+                
+            </div>
+
+            <div id="productDetails">
+  
+            </div>
+       
+        </nav>
+      
+    </div>
+    </section>
+
+
+    <!-- -------------banner section------------- -->
+    <section class="sustainability-banner">
+        <div class="sustainability-banner-container">
+            <div class="sustainability-banner-row">
+                <img src="images/sustainability-banner.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="sustainability">
+        <div class="sustainability-container">
+            <h1 class="sustainability-title">Industries</h1>
+            <p class="sustainability-content">Hydro Tork Manufacturing prioritizes sustainability by implementing
+                efficient water usage, renewable
+                energy sources, and eco-friendly materials in its production processes, reducing environmental impact
+                while maintaining high-quality output. Through innovative technologies and responsible practices, it
+                strives to minimize its carbon footprint and contribute positively to a greener future.
+            </p>
+            <div class="industrialImage-row">
+                <div class="industrialImage-col1">
+                    <div class="industrialImage-collapse">
+                        <div class="img-collapse1">
+                            <img src="images/power1.jpg" alt="" class="power1">
+                            <img src="images/power2.jpg" alt="" class="power2">
+                        </div>
+                        <div class="img-collapse2">
+                            <img src="images/power3.jpg" alt="" class="power3">
+                            <img src="images/power4.jpg" alt="" class="power4">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="industrialImage-col2">
+                    <h1>The advantages of our company are in the quality of products</h1>
+                    <p>Allan wrasse climbing gourami amur pike Arctic char, steelhead sprat sea lamprey grunion. Walleye poolfish sand goby butterfly ray stream catfish jewfish.</p>
+                    <div>
+                        <div>
+                            <i></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS library
+        AOS.init({
+            duration: 1000, // Duration of animation
+            once: true, // Animation occurs only once
+            // Additional options if needed
+        });
+    </script>
+</body>I
+
+</html>

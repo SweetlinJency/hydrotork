@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+<style>
+.strategy-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.strategy-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.strategy-col1 {
+    width: 50%;
+}
+
+.strategy-col2 {
+    width: 50%;
+}
+
+.strategy-col3 {
+    width: 50%;
+}
+
+.strategy-col4 {
+    width: 50%;
+}
+
+.strategy-col-gap1 {
+    margin: 70px 50px 70px 50px;
+    padding: 1px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.strategy-col-gap2 {
+    margin: 120px 0px 70px 100px;
+    padding: 1px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.strategy-para1 {
+    text-align: left;
+    font-size: 15px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.strategy-para2 {
+    text-align: left;
+    font-size: 15px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+#strategy-btn {
+    padding: 7px 15px;
+    margin: 30px 3px 0px 0px;
+    float: right;
+    /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
+    font-weight: bold;
+    font-size: medium;
+    border: gold;
+    border-radius: 4px;
+    background-color: gold;
+    font-stretch: extra-condensed;
+}
+
+#strategy-btn:hover {
+    background-color: #686767;
+    color: white;
+    border: ridge 1px;
+    border-color: black;
+}
+
+.strategy-col1::after {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 5px;
+    background-color: gold;
+    top: 580px;
+}
+
+.strategy-col-gap-img1 {
+    margin: 0px 0px -157px 22px;
+    padding: 0px 0px 0px 5px;
+}
+
+.strategy-col-gap-img2 {
+    margin: 39px 50px 0px -55px;
+    padding: 0px 0px 0px 5px;
+}
+
+.strategy-banner {
+    width: 100%;
+    height: 400px;
+    background: url("../static/images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (min-width:320px) {
+    .strategy-container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .strategy-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .strategy-col1 {
+        width: 100%;
+    }
+
+    .strategy-col1 h1 {
+        font-size: 28px;
+    }
+
+    .strategy-col1::after {
+        position: absolute;
+        content: '';
+        width: 40px;
+        height: 5px;
+        background-color: gold;
+        top: 550px;
+    }
+
+    .strategy-col-gap1 {
+        width: 90%;
+        margin: auto;
+        padding: 1px;
+        margin: 60px 0px;
+    }
+
+    .strategy-col2 {
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    .strategy-col-gap-img1 {
+        width: 90%;
+        margin: 0px 0px -157px 22px;
+        /* padding: 0px 0px 0px 5px; */
+    }
+
+    .strategy-btn {
+        width: 100%;
+        margin: auto;
+    }
+
+    .strategy-col3 {
+        width: 100%;
+        margin: auto;
+    }
+
+    .strategy-col4 {
+        width: 100%;
+        margin: auto;
+    }
+
+    .strategy-col-gap-img2 {
+        width: 90%;
+        height: 100%;
+        margin: 180px 0px 20px 0px;
+    }
+
+    .strategy-col-gap2 {
+        width: 90%;
+        margin: auto;
+        padding: 1px;
+        margin: 60px 0px;
+    }
+
+    .strategy-btn {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media (min-width:760px) {
+    .strategy-container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .strategy-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .strategy-col1 {
+        width: 100%;
+    }
+
+    .strategy-col1 h1 {
+        font-size: 40px;
+    }
+
+    .strategy-col1::after {
+        position: absolute;
+        content: '';
+        width: 40px;
+        height: 5px;
+        background-color: gold;
+        top: 560px;
+    }
+
+    .strategy-col-gap1 {
+        width: 90%;
+        margin: auto;
+        padding: 1px;
+        margin: 60px 0px;
+    }
+
+    .strategy-col2 {
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    .strategy-col-gap-img1 {
+        width: 90%;
+        margin: 0px 0px -157px 22px;
+        /* padding: 0px 0px 0px 5px; */
+    }
+
+    .strategy-btn {
+        width: 100%;
+        margin: auto;
+    }
+
+    .strategy-col3 {
+        width: 100%;
+        margin: auto;
+    }
+
+    .strategy-col4 {
+        width: 100%;
+        margin: auto;
+    }
+
+    .strategy-col-gap-img2 {
+        width: 90%;
+        height: 100%;
+        margin: 180px 0px 20px 0px;
+    }
+
+    .strategy-col-gap2 {
+        width: 90%;
+        margin: auto;
+        padding: 1px;
+        margin: 60px 0px;
+    }
+
+    .strategy-btn {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+@media (min-width:1020px) {
+    .strategy-container {
+        width: 85%;
+        margin: auto;
+    }
+
+    .strategy-row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .strategy-col1 {
+        width: 50%;
+    }
+
+    .strategy-col1 h1 {
+        font-size: 60px;
+    }
+
+    .strategy-col1::after {
+        position: absolute;
+        content: '';
+        width: 40px;
+        height: 5px;
+        background-color: gold;
+        top: 580px;
+    }
+
+    .strategy-col2 {
+        width: 50%;
+    }
+
+    .strategy-col-gap-img1 {
+        margin: 0px 0px -157px 32px;
+        padding: 0px 0px 0px 5px;
+    }
+
+
+    .strategy-col3 {
+        width: 50%;
+    }
+
+    .strategy-col4 {
+        width: 50%;
+    }
+
+    .strategy-col-gap2 {
+        margin: 120px 0px 70px 100px;
+        padding: 1px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="/indexSection"><img src="../static/images/logo1-removebg-preview.png"></a></div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><a href="/index">Home</a></li>
+                <li>
+                    <a href="/about" class="desktop-item">Company</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Company</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="../static/images/compasny-he (1).jpeg"  alt="">
+                            </div>
+                            <div class="row">
+                                <header>Who we are</header>
+                                <ul class="mega-links">
+                                    <li><a href="/abtStrategy">Strategy & Purpose</a></li>
+                                    <li><a href="#">Officers</a></li>
+                                    <li><a href="/abtHistory">History</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header></header>
+                                <ul class="mega-links">
+                                    <li><a href="/abtProducts">Brands</a></li>
+                                    <li><a href="#">Code of Conduct</a></li>
+                                    <li><a href="/abtLocation">Global Locations</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>Building Better</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Sustainability</a></li>
+                                    <li><a href="#">Innovation</a></li>
+                                    <li><a href="#">Foundation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="/pro" class="desktop-item">Products</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Products</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="../static/images/product-head.jpeg" alt="">
+                            </div>
+                            <div class="row">
+                                <!-- <header>Design Services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product1">Hydraulic Pumps</a></li>
+                                    <li><a href="/product2">Valves</a></li>
+                                    <li><a href="/product3">Power Packs</a></li>
+                                    <li><a href="/product4">Fittings</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <!-- <header>Email Services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product5">Intersial valves</a></li>
+                                    <li><a href="/product6">Control Works</a></li>
+                                    <li><a href="/product7">Activation</a></li>
+                                    <li><a href="/product8">Directional control</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <!-- <header>Security services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product9">Throttle valve</a></li>
+                                    <li><a href="/product10">PVR1T Variable</a></li>
+                                    <li><a href="/product11">HPV43 Double</a></li>
+                                    <li><a href="/product12">Cartridge Valve</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="/indus" class="desktop-item">Industries</a>
+                    <input type="checkbox" id="showDrop">
+                    <label for="showDrop" class="mobile-item">Industries</label>
+                    <ul class="drop-menu">
+                        <li><a href="/indus">Power</a></li>
+                        <li><a href="/indus">Steel</a></li>
+                        <li><a href="/indus">Plastic</a></li>
+                        <li><a href="/indus">Construction</a></li>
+                        <li><a href="/indus">Mechine Tools</a></li>
+                        <li><a href="/indus">Marine</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+
+    </nav>
+
+    <div class="strategy-banner">
+    </div>
+    <section class="strategy-section2">
+        <div class="strategy-container">
+            <div class="strategy-row">
+                <div class="strategy-col1">
+                    <h1> Strategy & Purpose</h1>
+                    <div class="strategy-col-gap1">
+                        <h2> Where We're Headed </h2> <br>
+                        <p class="strategy-para1">
+                            Our company strategy reflects our legacy and our continuing commitment
+                            to meet the needs of our customers and the communities in which we live
+                            and work. United by our Values, Hydro Tork employees around the world
+                            share a focused view of our business through the Operating & Execution
+                            Model, through which we are making strategic choices today to create
+                            profitable growth for tomorrow. Together, with our partners, we help our
+                            customers build a better, more sustainable world.
+                        </p>
+                        <div class="strategy-btn">
+                            <input type="button" id="strategy-btn" value="LEARN ABOUT OUR STRATRGY">
+                        </div>
+                    </div>
+                </div>
+                <div class="strategy-col2">
+                    <div class="strategy-col-gap-img1">
+                        <img src="../static/images/col2.jpg" alt="strategy-example img" width="100%" height="400px">
+                    </div>
+                </div>
+                <div class="strategy-col3">
+                    <div class="strategy-col-gap-img2">
+                        <img src="../static/images/col3.jpg" alt="strategy-example img" width="115%" height="500px">
+                    </div>
+                </div>
+                <div class="strategy-col4">
+                    <div class="strategy-col-gap2">
+                        <h2>Why We Do It</h2> <br>
+                        <p class="strategy-para2">
+                            For nearly 100 years, our products and services have helped improve the lives
+                            of people around the world. Our customers use our products to build the basic
+                            infrastructure that enables higher standards of living so that people have access
+                            to water, electricity, roads, bridges, hospitals, schools, and so much more. Our
+                            company strategy reflects our legacy and our continuing commitment to meet the
+                            needs of our customers and the communities in which we live and work. United by
+                            our Values, Hydro Tork employees around the world share a focused view of our
+                            business through the Operating & Execution Model, through which we are making
+                            strategic choices today to create profitable growth for tomorrow. Together with
+                            our partners, we help our customers build a better, more sustainable world.
+                        </p>
+                        <div class="strategy-btn">
+                            <input type="button" id="strategy-btn" value="LEARN ABOUT YOUR PURPOSE">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+     
+</body>
+
+</html>

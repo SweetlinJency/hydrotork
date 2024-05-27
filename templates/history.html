@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+      
+
+
+        #history-background {
+            background: linear-gradient(to right, rgb(14, 14, 14), transparent), url("../static/images/background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: 100%;
+        }
+
+        #history-background p {
+            padding: 130px 90px;
+            color: azure;
+            font-size: 30px;
+            z-index: 1;
+        }
+
+        #history-header-container {
+            width: 85%;
+            margin: auto;
+        }
+
+        #history-header-container h1 {
+            font-size: 60px;
+            position: relative;
+            /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
+            font-stretch: semi-condensed;
+            padding: 35px 0px;
+        }
+
+        h1::before {
+            content: "";
+            width: 43px;
+            height: 6px;
+            background-color: #ffcd11;
+            position: absolute;
+            left: 0px;
+            top: 83%;
+        }
+
+        #history-header-container p {
+            /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
+            padding: 3px 0px;
+        }
+
+        #history-content-container {
+            width: 85%;
+            margin: auto;
+            padding: 40px 0px;
+        }
+
+        #history-content-row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #history-content-col1 {
+            width: 50%;
+        }
+
+        #history-content-col2 {
+            width: 50%;
+        }
+
+        #history-content-col3 {
+            width: 50%;
+        }
+
+        #history-content-col4 {
+            width: 50%;
+        }
+
+        .content-para {
+            padding: 50px;
+        }
+
+        /* .content-para h2 {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        } */
+
+        .content-para p {
+            /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
+            padding: 10px 0px;
+            font-size: 15px;
+        }
+
+        .history-btn1 {
+            width: 200px;
+            height: 35px;
+            padding: 5px 0px;
+            margin: 10px 0px;
+            background-color: #ffcd11;
+            border: transparent;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .history-btn2 {
+            width: 200px;
+            height: 35px;
+            padding: 5px 0px;
+            margin: 10px 0px;
+            background-color: #ffcd11;
+            border: transparent;
+            border-radius: 5px;
+            float: right;
+            font-weight: bold;
+        }
+
+        .history-btn1:hover,
+        .history-btn2:hover {
+            background-color: #454545;
+            color: white;
+            border: solid 2px;
+            border-color: black;
+        }
+
+        @media (min-width:320px) {
+            #history-header-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            #history-header-container h1 {
+                font-size: 28px;
+            }
+
+            #history-content-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            #history-content-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #history-content-col1 {
+                width: 100%;
+            }
+
+            #history-content-col2 {
+                width: 100%;
+            }
+
+            #history-content-col3 {
+                width: 100%;
+            }
+
+            #history-content-col4 {
+                width: 100%;
+            }
+
+            .content-para {
+                width: 100%;
+                margin: auto;
+            }
+        }
+
+        @media (min-width: 760px) {
+            #history-header-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            #history-header-container h1 {
+                font-size: 28px;
+            }
+
+            #history-background {
+                width: 50%;
+                background-size: cover;
+            }
+
+            #history-content-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            #history-content-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #history-content-col1 {
+                width: 100%;
+            }
+
+            #history-content-col2 {
+                width: 100%;
+            }
+
+            #history-content-col3 {
+                width: 100%;
+            }
+
+            #history-content-col4 {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 1020px) {
+            #history-header-container {
+                width: 85%;
+                margin: auto;
+            }
+
+            #history-header-container h1 {
+                font-size: 60px;
+            }
+
+            #history-background {
+                background: linear-gradient(to right, rgb(14, 14, 14), transparent), url("images/background.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                width: 100%;
+            }
+
+            /* #history-background{
+                width: 50%;
+                background-size: cover;
+            } */
+            #history-content-container {
+                width: 85%;
+                margin: auto;
+            }
+
+            #history-content-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #history-content-col1 {
+                width: 50%;
+            }
+
+            #history-content-col2 {
+                width: 50%;
+            }
+
+            #history-content-col3 {
+                width: 50%;
+            }
+
+            #history-content-col4 {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="/indexSection"><img src="../static/images/logo1-removebg-preview.png"></a></div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><a href="/index">Home</a></li>
+                <li>
+                    <a href="/about" class="desktop-item">Company</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Company</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="../static/images/compasny-he (1).jpeg"  alt="">
+                            </div>
+                            <div class="row">
+                                <header>Who we are</header>
+                                <ul class="mega-links">
+                                    <li><a href="/abtStrategy">Strategy & Purpose</a></li>
+                                    <li><a href="#">Officers</a></li>
+                                    <li><a href="/abtHistory">History</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header></header>
+                                <ul class="mega-links">
+                                    <li><a href="/abtProducts">Brands</a></li>
+                                    <li><a href="#">Code of Conduct</a></li>
+                                    <li><a href="/abtLocation">Global Locations</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>Building Better</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Sustainability</a></li>
+                                    <li><a href="#">Innovation</a></li>
+                                    <li><a href="#">Foundation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="/pro" class="desktop-item">Products</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Products</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="../static/images/product-head.jpeg" alt="">
+                            </div>
+                            <div class="row">
+                                <!-- <header>Design Services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product1">Hydraulic Pumps</a></li>
+                                    <li><a href="/product2">Valves</a></li>
+                                    <li><a href="/product3">Power Packs</a></li>
+                                    <li><a href="/product4">Fittings</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <!-- <header>Email Services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product5">Intersial valves</a></li>
+                                    <li><a href="/product6">Control Works</a></li>
+                                    <li><a href="/product7">Activation</a></li>
+                                    <li><a href="/product8">Directional control</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <!-- <header>Security services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product9">Throttle valve</a></li>
+                                    <li><a href="/product10">PVR1T Variable</a></li>
+                                    <li><a href="/product11">HPV43 Double</a></li>
+                                    <li><a href="/product12">Cartridge Valve</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="/indus" class="desktop-item">Industries</a>
+                    <input type="checkbox" id="showDrop">
+                    <label for="showDrop" class="mobile-item">Industries</label>
+                    <ul class="drop-menu">
+                        <li><a href="/indus">Power</a></li>
+                        <li><a href="/indus">Steel</a></li>
+                        <li><a href="/indus">Plastic</a></li>
+                        <li><a href="/indus">Construction</a></li>
+                        <li><a href="/indus">Mechine Tools</a></li>
+                        <li><a href="/indus">Marine</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+
+    </nav>
+   
+
+    <section id="history-background">
+        <p>Our legacy</p>
+    </section>
+    <section id="history-section1">
+        <div id="history-header-container">
+            <h1>Hydro Tork Company History</h1>
+            <p>Enjoy the ingenious machines from our rich heritage, and more importantly, the people who founded and
+                built the company one breakthrough at a time.</p>
+            <p> with Benjamin Holt and C. L. Best, the people of Caterpillar have always been – and continue to be –
+                extraordinary.</p>
+        </div>
+    </section>
+    <section id="history-section2">
+        <div id="history-content-container">
+            <div id="history-content-row">
+                <div id="history-content-col1">
+                    <img src="../static/images/firstgap.jpg" alt="error" width="550px" height="300px">
+                </div>
+                <div id="history-content-col2">
+                    <div class="content-para">
+                        <h2>Our History</h2>
+                        <p>Over the last century we’ve grown with our customers. We’ve changed together as the world has
+                            changed: creating, building, problem solving, innovating, testing, servicing and improving.
+                            When customers choose our products, services and solutions today, they also gain nearly 100
+                            years of experience and expertise. </p>
+                        <input type="button" class="history-btn1" value="EXPLORE OUR HISTORY">
+                    </div>
+                </div>
+                <div id="history-content-col3">
+                    <div class="content-para">
+                        <h2 class="content-head">A Glimpse Into Our Corporate Archives</h2>
+                        <p>Our Corporate Archives team has the important role of telling, preserving and showcasing
+                            Caterpillar’s history and the role our equipment, customers and people have played in
+                            projects around the world. </p>
+                        <input type="button" class="history-btn2" value="SEE THE ARCHIVES">
+                    </div>
+                </div>
+                <div id="history-content-col4">
+                    <img src="../static/images/secondgap.jpg" alt="error" width="550px" height="300px">
+                </div>
+            </div>
+        </div>
+    </section>
+        
+
+
+
+
+    <script>
+        
+</script>
+
+    
+</body>
+
+</html>

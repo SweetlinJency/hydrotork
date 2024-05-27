@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Locations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .about-banner-container {
+            width: 100%;
+            margin: auto;
+        }
+
+        .about-banner-row img{
+            width: 100%;
+            margin-top: 100px;
+        }
+
+        .location-container {
+            width: 85%;
+            margin: auto;
+        }
+
+        .location-row {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .location-col {
+            width: 25%;
+            margin-top: 40px;
+        }
+
+        .location-title {
+            font-size: 40px;
+            position: relative;
+        }
+
+        .location-title::before {
+            content: "";
+            width: 50px;
+            height: 5px;
+            background-color: yellow;
+            top: 50px;
+            left: 0px;
+            position: absolute;
+        }
+
+        .location-para {
+            font-size: 20px;
+            padding-top: 40px;
+        }
+
+        .location-img-p {
+            font-size: 25px;
+            font-weight: 800;
+            padding-top: 10px;
+        }
+
+        @media (min-width:320px) {
+            .about-banner-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            .location-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .location-img {
+                width: 90%;
+                margin: auto;
+            }
+
+            .location-title {
+                font-size: 30px;
+            }
+
+            .location-title::before {
+                content: "";
+                width: 50px;
+                height: 5px;
+                background-color: yellow;
+                top: 40px;
+                left: 0px;
+                position: absolute;
+            }
+
+            .location-col {
+                width: 100%;
+            }
+        }
+
+        @media (min-width:760px) {
+            .about-banner-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            .location-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .location-img {
+                width: 90%;
+                margin: auto;
+            }
+
+            .location-title {
+                font-size: 30px;
+            }
+
+            .location-title::before {
+                content: "";
+                width: 50px;
+                height: 5px;
+                background-color: yellow;
+                top: 40px;
+                left: 0px;
+                position: absolute;
+            }
+
+            .location-col {
+                width: 40%;
+            }
+        }
+
+        @media (min-width:1020px) {
+            .about-banner-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            .location-row {
+                display: flex;
+                flex-wrap: nowrap;
+            }
+
+            .location-img {
+                width: 90%;
+                margin: auto;
+            }
+
+            /* .location-title {
+                font-size: 40px;
+            } */
+
+            .location-title::before {
+                content: "";
+                width: 50px;
+                height: 5px;
+                background-color: yellow;
+                top: 50px;
+                left: 0px;
+                position: absolute;
+            }
+
+            .location-col {
+                width: 25%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="/indexSection"><img src="../static/images/logo1-removebg-preview.png"></a></div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><a href="/index">Home</a></li>
+                <li>
+                    <a href="/about" class="desktop-item">Company</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Company</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="../static/images/compasny-he (1).jpeg"  alt="">
+                            </div>
+                            <div class="row">
+                                <header>Who we are</header>
+                                <ul class="mega-links">
+                                    <li><a href="/abtStrategy">Strategy & Purpose</a></li>
+                                    <li><a href="#">Officers</a></li>
+                                    <li><a href="/abtHistory">History</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header></header>
+                                <ul class="mega-links">
+                                    <li><a href="/abtProducts">Brands</a></li>
+                                    <li><a href="#">Code of Conduct</a></li>
+                                    <li><a href="/abtLocation">Global Locations</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>Building Better</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Sustainability</a></li>
+                                    <li><a href="#">Innovation</a></li>
+                                    <li><a href="#">Foundation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="/pro" class="desktop-item">Products</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Products</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="../static/images/product-head.jpeg" alt="">
+                            </div>
+                            <div class="row">
+                                <!-- <header>Design Services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product1">Hydraulic Pumps</a></li>
+                                    <li><a href="/product2">Valves</a></li>
+                                    <li><a href="/product3">Power Packs</a></li>
+                                    <li><a href="/product4">Fittings</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <!-- <header>Email Services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product5">Intersial valves</a></li>
+                                    <li><a href="/product6">Control Works</a></li>
+                                    <li><a href="/product7">Activation</a></li>
+                                    <li><a href="/product8">Directional control</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <!-- <header>Security services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product9">Throttle valve</a></li>
+                                    <li><a href="/product10">PVR1T Variable</a></li>
+                                    <li><a href="/product11">HPV43 Double</a></li>
+                                    <li><a href="/product12">Cartridge Valve</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="/indus" class="desktop-item">Industries</a>
+                    <input type="checkbox" id="showDrop">
+                    <label for="showDrop" class="mobile-item">Industries</label>
+                    <ul class="drop-menu">
+                        <li><a href="/indus">Power</a></li>
+                        <li><a href="/indus">Steel</a></li>
+                        <li><a href="/indus">Plastic</a></li>
+                        <li><a href="/indus">Construction</a></li>
+                        <li><a href="/indus">Mechine Tools</a></li>
+                        <li><a href="/indus">Marine</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+
+    </nav>
+
+
+
+
+    <!-- -------------banner section------------- -->
+    <section class="about-banner">
+        <div class="about-banner-row">
+            <img src="../static/images/global-banner.jpg" alt="" height="550px">
+        </div>
+    </section>
+    <section class="location">
+    <div class="about-banner-container">
+        <div class="location-container">
+            <h1 class="location-title">Global Locations</h1>
+            <p class="location-para">Russia is the largest country in the world, while Tamil Nadu, Odisha, and Karnataka
+                are
+                states in India, each known for their rich cultural heritage, diverse landscapes, and significant
+                contributions to art, history, and technology.</p>
+            <div class="location-row">
+                <div class="location-col">
+                    <div class="location-img">
+                        <img src="../static/images/tamilnadu1.jpg" alt="" width="200px">
+                    </div>
+                    <p class="location-img-p">TamilNadu</p>
+                </div>
+                <div class="location-col">
+                    <div class="location-img">
+                        <img src="../static/images/russia1.jpg" alt="" width="200px">
+                    </div>
+                    <p class="location-img-p">Russia</p>
+                </div>
+                <div class="location-col">
+                    <div class="location-img">
+                        <img src="../static/images/odisha.jpg" alt="" width="200px">
+                    </div>
+                    <p class="location-img-p">Odisha</p>
+                </div>
+                <div class="location-col">
+                    <div class="location-img">
+                        <img src="../static/images/karnataka1.jpg" alt="" width="200px">
+                    </div>
+                    <p class="location-img-p">Karnataka</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+</body>
+
+</html>

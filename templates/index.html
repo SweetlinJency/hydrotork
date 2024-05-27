@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hydro TORK</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+
+    <!-- -------------------------------menu section------------------------------------- -->
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="/indexSection"><img src="../static/images/logo1-removebg-preview.png"></a></div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><a href="/index">Home</a></li>
+                <li>
+                    <a href="/about" class="desktop-item">Company</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Company</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="../static/images/compasny-he (1).jpeg"  alt="">
+                            </div>
+                            <div class="row">
+                                <header>Who we are</header>
+                                <ul class="mega-links">
+                                    <li><a href="/abtStrategy">Strategy & Purpose</a></li>
+                                    <li><a href="#">Officers</a></li>
+                                    <li><a href="/abtHistory">History</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header></header>
+                                <ul class="mega-links">
+                                    <li><a href="/abtProducts">Brands</a></li>
+                                    <li><a href="#">Code of Conduct</a></li>
+                                    <li><a href="/abtLocation">Global Locations</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>Building Better</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Sustainability</a></li>
+                                    <li><a href="#">Innovation</a></li>
+                                    <li><a href="#">Foundation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="/pro" class="desktop-item">Products</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Products</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="../static/images/product-head.jpeg" alt="">
+                            </div>
+                            <div class="row">
+                                <!-- <header>Design Services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product1">Hydraulic Pumps</a></li>
+                                    <li><a href="/product2">Valves</a></li>
+                                    <li><a href="/product3">Power Packs</a></li>
+                                    <li><a href="/product4">Fittings</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <!-- <header>Email Services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product5">Intersial valves</a></li>
+                                    <li><a href="/product6">Control Works</a></li>
+                                    <li><a href="/product7">Activation</a></li>
+                                    <li><a href="/product8">Directional control</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <!-- <header>Security services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="/product9">Throttle valve</a></li>
+                                    <li><a href="/product10">PVR1T Variable</a></li>
+                                    <li><a href="/product11">HPV43 Double</a></li>
+                                    <li><a href="/product12">Cartridge Valve</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="/indus" class="desktop-item">Industries</a>
+                    <input type="checkbox" id="showDrop">
+                    <label for="showDrop" class="mobile-item">Industries</label>
+                    <ul class="drop-menu">
+                        <li><a href="/indus">Power</a></li>
+                        <li><a href="/indus">Steel</a></li>
+                        <li><a href="/indus">Plastic</a></li>
+                        <li><a href="/indus">Construction</a></li>
+                        <li><a href="/indus">Mechine Tools</a></li>
+                        <li><a href="/indus">Marine</a></li>
+                    </ul>
+                </li>
+                <li><a href="/contactSection">Contact</a></li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+
+    </nav>
+
+
+    <!-- -----------------------------------home section---------------------------------------- -->
+    <section class="home">
+
+        <div class="slider">
+            <!-- list Items -->
+            <div class="list">
+                <div class="item active">
+                    <img src="../static/images/ban1.jpg">
+                    <div class="content">
+                        <!-- <p>HYDRO TORK</p> -->
+                        <h2>HYDRO TORK</h2>
+                        <a href="/indexSection"><button onclick="homeview1()">VIEW</button></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../static/images/pumps-transformed.jpeg">
+                    <div class="content">
+                        <p>HYDRO TORK</p>
+                        <h2>Hydraulic Pumps</h2>
+                        <a href="/product1"><button onclick="homeview2()">VIEW</button></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../static/images/valves-transformed.jpeg">
+                    <div class="content">
+                        <p>HYDRO TORK</p>
+                        <h2>Valves</h2>
+                        <a href="/product2"><button onclick="homeview3()">VIEW</button></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../static/images/powerpack.png">
+                    <div class="content">
+                        <p>HYDRO TORK</p>
+                        <h2>Power Packs</h2>
+                        <a href="/product3"><button onclick="homeview4()">VIEW</button></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../static/images/fittings.jpeg">
+                    <div class="content">
+                        <p>HYDRO TORK</p>
+                        <h2>Fittings</h2>
+                        <a href="/product4"><button onclick="homeview5()">VIEW</button></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../static/images/interiel valves.jpeg">
+                    <div class="content">
+                        <p>HYDRO TORK</p>
+                        <h2>Intersial valves</h2>
+                        <a href="/product5"><button>VIEW</button></a>
+                    </div>
+                </div>
+            </div>
+            <!-- button arrows -->
+            <div class="arrows">
+                <button id="prev">
+                    <</button>
+                        <button id="next">></button>
+            </div>
+        </div>
+
+
+
+        <!--  ------------------------------- home page ------------------------------------------------- -->
+        <div class="home-bg-color">
+            <div class="home-container">
+                <div class="row-home">
+                    <div class="home-col" onclick="productsSection()">
+                        <a href="/productSection">
+                            <img src="../static/images/index-about.jpg" alt="">
+                            <div class="home-col-heading">
+                                <h1>Products & Services</h1>
+                            </div>
+                        </a>
+                        
+                    </div>
+                    <div class="home-col" onclick="aboutSection()">
+                        <a href="/aboutSection">
+                            <img src="../static/images/index-about1.png" alt="">
+                            <div class="home-col-heading">
+                                <h1>About</h1>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="home-col" onclick="industriesSection()">
+                        <a href="/industriesSection">
+                            <img src="../static/images/index-industries.jpg" alt="">
+                            <div class="home-col-heading">
+                                <h1>Industries</h1>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- --------------------------------------------quick links------------------------------------------ -->
+        <div class="home-social-media" id="contact" id="contactSection">
+            <div class="home-container">
+                <div class="row-social-media">
+                    <div class="social-media-heading">
+                        <h1>Follow Hydro TORK On Social Media</h1>
+                    </div>
+                    <div class="social-media-list">
+                        <ul>
+                            <a href="https://www.instagram.com/hydrotork" target="_blank" title="instagram">
+                                <li><img src="../static/images/insta.svg" alt=""></li>
+                            </a>
+                            <!-- <a href="" title="facebook">
+                                <li><img src="../static/images/fb.svg" alt=""></li>
+                            </a> -->
+                            <a title="whatsapp" href="https://wa.me/7871551306" target="_blank" class="whatsapp-link">
+                                <li><img src="../static/images/WhatsApp_icon-removebg-preview.png" alt=""></li>
+                            </a>
+                            <a href="mailto:hydrotorkindustries@gmail.com" title="mail">
+                                <li><img src="../static/images/gmail.png" alt=""></li>
+                            </a>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="detail-container">
+            <div class="detail-row">
+                <div class="detail-col">
+                    <div class="details-info">
+                        <div class="email-detail">
+                            <div class="address-icon" >
+                                <i class='fas fa-envelope'></i>
+                            </div>
+                            
+                            <div class="address-details" style="padding-left: 25px;">
+                                <h3 class="head-deatail">Email : <span>hydrotorkindustries@gmail.com</span></h3>
+                            </div>
+                        </div>
+                        <div class="email-detail">
+                            <div class="address-icon">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="address-details" style="padding-left: 25px;">
+                                <h3 class="head-deatail">Contact: <span>+91 7871551306</span></h3>
+                            </div>
+                        </div>
+                        <div class="email-detail">
+                            <div class="address-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="address-details" style="padding-left: 25px;">
+                                <h3 class="head-deatail">Address: <span>12/49 - 3, 4th Street,College Road,Kottaram, kanyakumari(D.T)-629 703</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-col">
+
+                    <div class="carousel" onmouseenter="pauseAnimation()" onmouseleave="resumeAnimation()">
+                        <div class="carousel-inner">
+                            <div class="carousel-item">
+                                <img src="../static/images/slider1.jpg" alt="">
+                                <div class="title">
+                                    <a href="#">Sustainability</a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../static/images/sider2.jpg" alt="">
+                                <div class="title">
+                                    <a href="#">Our Purpose</a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../static/images/slider3.jpg" alt="">
+                                <div class="title">
+                                    <a href="#">Our History</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        var carousel = document.querySelector('.carousel-inner');
+                        var isPaused = false;
+
+                        function pauseAnimation() {
+                            isPaused = true;
+                            carousel.style.animationPlayState = 'paused';
+                        }
+
+                        function resumeAnimation() {
+                            isPaused = false;
+                            carousel.style.animationPlayState = 'running';
+                        }
+                    </script>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.location.pathname === "/contactSection") {
+                document.getElementById("contactSection").scrollIntoView();
+            }
+        });
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/SplitText.min.js"></script>
+    <script src="../static/js/main.js"></script>
+</body>
+
+</html>

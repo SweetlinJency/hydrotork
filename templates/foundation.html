@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .foundation-container {
+            width: 85%;
+            margin: auto;
+        }
+
+        .found1 {
+            font-size: 45px;
+            position: relative;
+        }
+
+        .found1::after {
+            content: "";
+            position: absolute;
+            top: 70px;
+            left: 1px;
+            background-color: rgb(240, 198, 11);
+            width: 40px;
+            height: 5px;
+        }
+
+        .found1-item1 h3 {
+            font-size: 25px;
+            margin-bottom: -10px;
+        }
+
+        .found1-para {
+            font-size: 18px;
+        }
+
+        .found-img {
+            display: flex;
+            gap: 20px;
+        }
+
+        .found-img img {
+            margin-top: 20px;
+        }
+
+        .found-img h3 {
+            font-size: 20px;
+        }
+
+        .found-img ul li {
+            list-style-type: square;
+        }
+
+        .found-img .found-focus {
+            width: 45%;
+            min-height: 7%;
+            background-color: rgb(240, 198, 11);
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .found-img .found-focus:hover {
+            background-color: rgb(95, 90, 90);
+            color: rgb(233, 237, 240);
+            border: 2px solid black;
+        }
+
+        .found-img::after {
+            content: "";
+            position: absolute;
+            top: 145%;
+            width: 85%;
+            height: 5px;
+            background-color: rgb(240, 198, 11);
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href="index.html"><img src="images/logo1-removebg-preview.png"></a></div>
+            <input type="radio" name="slider" id="menu-btn">
+            <input type="radio" name="slider" id="close-btn">
+            <ul class="nav-links">
+                <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="about.html" class="desktop-item">Company</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Company</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg"
+                                    alt="">
+                            </div>
+                            <div class="row">
+                                <header>Who we are</header>
+                                <ul class="mega-links">
+                                    <li><a href="strategy.html">Strategy & Purpose</a></li>
+                                    <li><a href="#">Officers</a></li>
+                                    <li><a href="history.html">History</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header></header>
+                                <ul class="mega-links">
+                                    <li><a href="products.html">Brands</a></li>
+                                    <li><a href="#">Code of Conduct</a></li>
+                                    <li><a href="locations.html">Global Locations</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <header>Building Better</header>
+                                <ul class="mega-links">
+                                    <li><a href="#">Sustainability</a></li>
+                                    <li><a href="#">Innovation</a></li>
+                                    <li><a href="#">Foundation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="products (2).html" class="desktop-item">Products</a>
+                    <input type="checkbox" id="showMega">
+                    <label for="showMega" class="mobile-item">Products</label>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <img src="https://fadzrinmadu.github.io/hosted-assets/responsive-mega-menu-and-dropdown-menu-using-only-html-and-css/img.jpg"
+                                    alt="">
+                            </div>
+                            <div class="row">
+                                <!-- <header>Design Services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="produ1.html">Hydraulic Pumps</a></li>
+                                    <li><a href="produ2.html">Valves</a></li>
+                                    <li><a href="produ3.html">Power Packs</a></li>
+                                    <li><a href="produ4.html">Fittings</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <!-- <header>Email Services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="produ5.html">Intersial valves</a></li>
+                                    <li><a href="produ6.html">Control Works</a></li>
+                                    <li><a href="produ7.html">Activation</a></li>
+                                    <li><a href="produ8.html">Directional control</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <!-- <header>Security services</header> -->
+                                <ul class="mega-links">
+                                    <li><a href="produ9.html">Throttle valve</a></li>
+                                    <li><a href="produ10.html">PVR1T Variable</a></li>
+                                    <li><a href="produ11.html">HPV43 Double</a></li>
+                                    <li><a href="produ12.html">Cartridge Valve</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="industries.html" class="desktop-item">Industries</a>
+                    <input type="checkbox" id="showDrop">
+                    <label for="showDrop" class="mobile-item">Industries</label>
+                    <ul class="drop-menu">
+                        <li><a href="industries.html">Power</a></li>
+                        <li><a href="industries.html">Steel</a></li>
+                        <li><a href="industries.html">Plastic</a></li>
+                        <li><a href="industries.html">Construction</a></li>
+                        <li><a href="industries.html">Mechine Tools</a></li>
+                        <li><a href="industries.html">Marine</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+                <li>
+                    <div class="search-box">
+                        <input type="text" class="search-txt" placeholder="Type Here To Search...">
+                        <a href="#" class="search-btn">
+                            <i class="fa fa-search" aria-hidden="true"></i> </a>
+                    </div>
+                </li>
+            </ul>
+            <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+
+    </nav>
+
+    <section class="foundation-container" style="line-height: 2;">
+        <h2 class="found1">Hydra TROK Foundation</h2>
+        <div class="found1-item1">
+            <h3>OUR STRATEGY</h3>
+            <p class="found1-para">With a history dating back to 1938, the Anchor brand is known for
+                high-quality hydraulic hose,
+                steel couplings and complete assemblies for the OEM and general market business sectors.
+            </p>
+            <h3>OUR VISION</h3>
+            <p class="found1-para">The Anchor product line includes:</p>
+            <h3>OUR MISSION</h3>
+            <p class="found1-para">Anchor branded products are manufactured to industry-standard specifications
+                and marketed to a
+                worldwide customer base. The hose and coupling products provide OEM and general market business
+                customers with many options.
+            </p>
+        </div>
+        <div class="found-img" >
+            <div class="found-img1" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="images/found1.jpg" alt="" srcset="" width="360px" height="250px">
+                <h3>Create The Workforce Of The 21st Century</h3>
+                <ul>
+                    <li>Workforce Readiness</li>
+                    <li>STEM: Science, Technology, Engineering & Math Education</li>
+                </ul>
+                <a href="#"><button class="found-focus">SEE OUR FOCUS</button></a>
+            </div>
+            <div class="found-img1" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="images/found3.jpg" alt="" srcset="" width="360px" height="250px">
+                <h3>Create The Workforce Of The 21st Century</h3>
+                <ul>
+                    <li>Workforce Readiness</li>
+                    <li>STEM: Science, Technology, Engineering & Math Education</li>
+                </ul>
+                <a href="#"><button class="found-focus">SEE OUR FOCUS</button></a>
+            </div>
+            <div class="found-img1" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="images/found1.jpg" alt="" srcset="" width="360px" height="250px">
+                <h3>Create The Workforce Of The 21st Century</h3>
+                <ul>
+                    <li>Workforce Readiness</li>
+                    <li>STEM: Science, Technology, Engineering & Math Education</li>
+                </ul>
+                <a href="#"><button class="found-focus">SEE OUR FOCUS</button></a>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
